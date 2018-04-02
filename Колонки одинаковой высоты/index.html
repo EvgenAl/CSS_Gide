@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Template</title>
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="wrap">
+		<div class="col one">
+			<h1>Hello</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum voluptate, neque eius recusandae autem molestiae! Iste nobis ut optio necessitatibus.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo eaque provident, ut possimus iure.</p>
+			<a href="#">link</a>
+		</div>
+		<div class="col two">
+			<h1>Hello</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia et eaque deserunt repellat, quam laborum quas vitae! Sunt atque pariatur aspernatur cupiditate, est nemo culpa.</p>
+			<a href="link">link</a>
+		</div>
+		<div class="col three">
+			<h1>Hello</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum sequi, laboriosam incidunt. Adipisci vero, ex natus iste tempora ab eligendi, facilis repellendus alias dolorem vitae numquam, voluptatum quisquam mollitia, quam.</p>
+			<a href="link">link</a>
+		</div>
+	</div>
+	<h1>Или на Jq</h1>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+	$(function(){var maxH = 0;
+	$(".slide").each(function () {
+		var h_block = parseInt($(this).height());
+		if(h_block > maxH) {
+			maxH = h_block;
+		};
+	});
+	$(".slide").height(maxH);
+	});
+	</script>
+</body>
+</html>

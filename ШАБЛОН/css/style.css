@@ -1,0 +1,21 @@
+nav{
+		background: #eee;
+		overflow: hidden;/*чтоб из элемента не утекали margin*/
+}
+ul{
+	margin: 0;
+	padding: 0;
+	margin: 20px 0;/*margin у вложенного элемента не выпадает из контейнера если бл элемент inline-block*/
+	overflow: hidden;
+}
+li{
+	list-style-type: none;
+	float:left;
+}
+a{
+	display: inline-block;
+	color:#000;
+	text-decoration: none;
+	padding: 10px;
+	text-transform: uppercase;
+}

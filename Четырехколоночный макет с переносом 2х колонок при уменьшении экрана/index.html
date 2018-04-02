@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Макет Flexbox</title>
+	<script type="text/javascript">
+	</script>
+	<style>
+	.wrapper{
+		display: flex;
+		flex-direction:row;
+		justify-content:space-around;
+		flex-wrap:wrap;
+		align-content:stretch;
+	}
+	.next_Wrap{		
+		flex-grow:1;		
+		display: flex;
+		justify-content:space-around;
+		flex-wrap:wrap;
+		align-content:stretch;
+		border:1px solid #ccc;
+
+	}
+	.item{
+		border:2px solid #000;
+		margin:10px;
+		width:250px;
+		padding:5px;
+		text-align: center;
+		flex-basis:250px;
+		flex-grow:1;	
+	}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="next_Wrap">
+			<div class='item'>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis sit cumque voluptas unde, aliquid, expedita numquam recusandae quos reiciendis molestiae obcaecati doloremque iste, quis inventore dolores magni, voluptate officiis facilis.</p>
+			</div>
+			<div class='item'>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis sit cumque voluptas unde, aliquid, expedita numquam recusandae quos reiciendis molestiae obcaecati doloremque iste, quis inventore dolores magni, voluptate officiis facilis.</p>
+			</div>
+		</div>
+		<div class="next_Wrap">
+			<div class='item'>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis sit cumque voluptas unde, aliquid, expedita numquam recusandae quos reiciendis molestiae obcaecati doloremque iste, quis inventore dolores magni, voluptate officiis facilis.</p>
+			</div>
+			<div class='item'>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis sit cumque voluptas unde, aliquid, expedita numquam recusandae quos reiciendis molestiae obcaecati doloremque iste, quis inventore dolores magni, voluptate officiis facilis.</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+.parent{
+	border:2px solid black;
+	height: 150px;
+	margin: 0 auto;
+	width: 220px;
+	padding: 0 20px;
+}
+
+.block-ib{
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #000;
+}
+
+.block-ib1{
+	height: 50px;
+}
+
+/*Вертикальное центрирование элементов в контейнере с фиксированной высотой*/
+
+.parent2{
+	border: 2px solid black;
+	margin: 50px auto;
+	width: 400px;
+	height: 200px;
+}
+
+.parent-vm1{
+	line-height: 200px; 
+}
+
+/*С помощью табличного отображения блока*/
+
+.parent3{
+	border: 2px solid black;
+	margin: 0 auto;
+	width: 400px;
+}
+.Block-table{
+	height: 150px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/*С помощью абсолютного позиционирования*/
+.parent4 {
+	border: 2px solid black;
+	margin: 0 auto;
+	position: relative;
+	margin-top: 50px;
+	width: 300px;
+	height: 300px; /* Важно, чтобы родитель имел высоту отличную от "авто" */
+}
+.child {
+	position: absolute;
+	top: 50%;
+	height: 50px;
+	margin-top: -25px; /* половина высоты дочернего элемента */
+}
+
+/*С помощью flexbox*/
+
+.parent5{
+	border: 2px solid black;
+	margin: 0 auto;
+	position: relative;
+	margin-top: 50px;
+	width: 300px;
+	height: 300px;
+	display:flex;
+}
+
+.child_Fl{
+	text-align:center;
+	margin:auto;
+}
+
+.child_Fl>h1, .child_Fl>p{
+	margin:0;
+}

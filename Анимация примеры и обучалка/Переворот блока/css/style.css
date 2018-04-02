@@ -1,0 +1,48 @@
+body{
+	margin: 0;
+	padding: 0;
+	color:#3d3d3d;
+	font-family: arial,sans-serif;
+	background: #eee;
+	font-size: 14px;
+}
+
+.t3d{
+	width: 300px;
+	height: 400px;
+	margin: 50px auto;
+	perspective:1000px;
+}
+
+.t3d:hover .rotate{
+	transform:rotateY(180deg);
+}
+
+.rotate{
+	position: relative;
+	transform-style:preserve-3d;
+	transition:0.5s;
+}
+
+.text{
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform:rotateY(180deg);
+}
+
+.pd{
+	padding: 20px;
+}
+
+img{
+	vertical-align: middle;
+}
+
+img, .text{
+	border: 4px double #ccc;
+	width: 300px;
+	height: 400px;
+	background: #fff;
+	backface-visibility:hidden;
+}

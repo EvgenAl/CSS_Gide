@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Template</title>
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<h1>ФОРМЫ HTML5</h1>
+<form action="file.php" action='get'><!--адрес файла обработчика и метод отправки данных-->
+	<p><input type="text" name='name' placeholder="Name"></p>
+	<p><input type='password' name='password' placeholder='Password' maxlength='10'></p>
+	<p>
+		<input type="checkbox" name='check1'>
+		<input type="checkbox" name='check2'>
+		<input type="checkbox" name='check3'>
+	</p>
+	<p>
+		<input type="radio" name='rw1'>
+		<input type="radio" name='rw1'>
+		<input type="radio" name='rw1'>
+	</p>
+	<p>
+		<select name="" id="">
+			<option value="">Один</option>
+			<option value="">Два</option>
+			<option value="">Три</option>
+			<option value="">Четыре</option>
+		</select>
+	</p>
+	<textarea name="" id="" cols="30" rows="10"></textarea>
+	<hr>
+	<!--Новые формы HTML5-->
+	<p><input type="email" placeholder="email" required='required'></p>
+	<p><input type="tel" placeholder="phone number"></p>
+	<p><input type="url" placeholder="your url"></p>
+	<p><input type="search" placeholder="search"></p>
+	<p><input type="number" name="num" min='1' max='10' step='2'></p>
+	<p><input type="range" step='1'></p>
+	<p><input type="color"></p>
+	<p><input type="date" name="date"></p>
+	<p><input type="time" name="time"></p>
+	<progress max='100' value='80'></progress>
+	<!---->
+	<p><input type="submit" value='Отправить'></p>
+	<p><input type="reset" value="Сброс"></p>
+	<p><input type="image" src='img/sub.png'></p><!--Аналог submit-->
+	<p><input type="file"></p>	
+</form>
+</body>
+</html>

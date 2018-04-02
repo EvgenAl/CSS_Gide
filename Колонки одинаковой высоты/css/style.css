@@ -1,0 +1,30 @@
+body{
+	color:#ccc;
+	margin: 0;
+	padding: 0;
+	color:#fff;
+}
+.wrap{
+	background:green;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction:row;
+	-ms-flex-direction:row;
+	flex-direction:row;
+	-webkit-justify-content:space-between;
+	-ms-flex-pack:justify;
+	justify-content:space-between;
+	-webkit-align-items:stretch;
+	    -ms-flex-align:stretch;
+	        align-items:stretch;
+}
+.col{
+	width: 200px;
+	margin: 10px;
+	border:2px solid #000;
+	-webkit-flex-grow:1;
+	    -ms-flex-positive:1;
+	        flex-grow:1;
+}
+

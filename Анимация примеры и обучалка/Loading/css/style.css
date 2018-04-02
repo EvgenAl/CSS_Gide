@@ -1,0 +1,25 @@
+.loading:after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    -webkit-animation: ellipsis 2s infinite;
+    animation: ellipsis 2s infinite;
+    content: "..."; /* ascii code for the ellipsis character */
+}
+
+@-webkit-keyframes ellipsis {
+  from {
+    width: 2px;
+  }
+  to {
+    width: 15px;
+  }
+}
+
+
+/* Just for style */
+.loading{
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "PT Sans";
+}

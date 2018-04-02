@@ -1,0 +1,459 @@
+/*==============Border-radius===================*/
+
+body {
+    background:url(http://subtlepatterns.com/patterns/subtlenet2.png);
+    font:14px'PT Sans', Tahoma, Arial;
+    
+}
+hr{
+	color:#000;
+	margin:50px 0;
+}
+
+.contain_first{
+	width: 200px;
+	height: 200px;
+	margin: 20px;
+	background: #FFDD00;
+	border-radius: 14px 130px;
+	-moz-border-radius: 14px 130px;
+	-webkit-border-radius: 14px 130px;
+}
+
+.contain_second{
+	width: 200px;
+	height: 200px;
+	margin: 20px;
+	background: #000;
+	border-bottom-right-radius: 10px 40px;
+}
+
+.contain_third{
+	width: 200px;
+	height: 200px;
+	margin: 20px;
+	background: #000;
+	border-radius: 50%;
+	border: 4px solid #444;
+}
+
+.contain_fourth_Top{
+	width: 0;
+	height: 0;
+	border-bottom: 100px solid #000;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	margin: 20px;
+	display: inline-block;
+}
+
+.contain_fourth_Bottom{
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-left: 100px solid #000;
+	border-right: 50px solid transparent;
+	margin: 20px;
+	display: inline-block;
+}
+
+.contain_fourth_Right{
+	width: 0;
+	height: 0;
+	border-left: 100px solid #000;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+	margin: 20px;
+	display: inline-block;
+}
+
+.contain_fourth_Left{
+	width: 0;
+	height: 0;
+	border-right: 100px solid #000;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+	margin: 20px;
+	display: inline-block;
+}
+
+.contain_сorner{
+	width: 0;
+	height: 0;
+	border-bottom: 100px solid #000;
+	border-left: 50px solid transparent;
+	border-right: 0px solid transparent;
+	margin: 20px;
+	display: inline-block;
+}
+
+.contain{
+	width: 200px;
+	height: 200px;
+	background: #ddd;
+	margin: 20px;
+	border-radius: 5px;
+	position: relative
+}
+
+.contain::after{
+	content:'';
+	position: absolute;
+	bottom:-10px;
+	left:95px;
+	width: 0;
+	height: 0;
+	border-top: 10px solid #ddd;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+}
+
+/*==============Background===================*/
+
+.contain-bg{
+	width: 700px;
+	height: 400px;
+	border: 3px solid #999;
+	margin:50px;
+	background-image: url(../images/js.jpg),url(../images/grad.jpg);
+	background-repeat: no-repeat,repeat;
+	background-position: 210px 70px;/*по горизонтальной оси и вертикальной оси или отступ слева и сверху*/
+	background: #eee url(../images/js.jpg),url(../images/grad.jpg) center center no-repeat,repeat;
+	background-size:40%, cover;
+
+	/*
+	background-position: center;
+	-webkit-background-size: contain;
+	background-size: contain;
+	-webkit-background-size: cover;
+	background-size: cover;
+	*/
+}
+
+.button{
+	display: inline-block;
+	margin: 20px;
+	height: 100px;
+	width: 100px;
+	background: #fff;
+	cursor:pointer;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	box-shadow: 0 3px 20px rgba(0,0,0,.25), inset 0 2px 0 rgba(222,222,222,.6),
+	0 3px 20px rgba(0,0,0,.1), inset 0 0 20px rgba(0,0,0,.1);
+	-moz-box-shadow: 0 3px 20px rgba(0,0,0,.25), inset 0 2px 0 rgba(222,222,222,.6),
+	0 3px 20px rgba(0,0,0,.1), inset 0 0 20px rgba(0,0,0,.1);
+	-webkit-box-shadow: 0 3px 20px rgba(0,0,0,.25), inset 0 2px 0 rgba(222,222,222,.6),
+	0 3px 20px rgba(0,0,0,.1), inset 0 0 20px rgba(0,0,0,.1);
+}
+.button:hover{
+	box-shadow: inset 0 0 20px rgba(0,0,0,.15),  0 2px 0 rgba(222,222,222,.2),
+ inset 0 0 20px rgba(0,0,0,.1);}
+
+ .button::after{
+ 	content:'';
+width: 100px;
+height: 100px;
+display: block;
+opacity: .8;
+ 	}
+ 	.btn-photo::after{
+ 		background: url(../images/photo.jpg) center no-repeat;
+ 	}
+ 		.btn-settings::after{
+ 		background: url(../images/Settings-icon1.png) center no-repeat;
+ 	}
+ 		.btn-tag::after{
+ 		background: url(../images/tag.png) center no-repeat;
+ 	}
+
+ 	/*==============Transition===================*/
+
+ 	.nav{
+ 		text-transform:uppercase;
+ 		list-style-type: none;
+ 		padding: 0;
+ 		margin: 30px;
+ 		width: 50px;
+ 		opacity: .5;
+ 		transition:opacity .5s ease-in-out;
+		-moz-transition:opacity .5s ease-in-out;
+		-o-transition:opacity .5s ease-in-out;
+		-webkit-transition:opacity .5s ease-in-out; 		
+ 	}
+
+	.nav:hover{
+		opacity: 1;
+	}
+
+	.nav li{
+		height: 50px;
+		width: 50px;
+		overflow: hidden;
+		transition:width .5s ease-in-out, height .5s ease-in-out;
+		-moz-transition:width .5s ease-in-out, height .5s ease-in-out;
+		-o-transition:width .5s ease-in-out, height .5s ease-in-out;
+		-webkit-transition:width .5s ease-in-out, height .5s ease-in-out;
+	}
+
+  .nav li:hover{
+	width: 200px;
+	height: 175px;
+  }
+
+ 	.nav a{
+ 		text-decoration: none;
+ 		color:#fff;
+ 		display: block;
+ 		width: 200px;
+ 		height: 40px;
+ 		line-height: 40px;
+ 		background: #bbb;
+ 		margin:1px;
+ 		padding-left: 15px;
+ 		cursor: pointer;
+ 		transition-property:all;/*Перечисляем свойства, которые меняются*/
+ 	  transition-duration:.5s;/*Продолжительность перехода*/
+ 		transition-timing-function:ease-in-out;/*Линейная зависимость времени от анимации*/
+ 		/*transition-delay:.1s;*//*задержка перед началом анимации*/
+ 		transition:all .5s ease-in-out;
+ 		-moz-transition:all .5s ease-in-out;
+ 		-webkit-transition:all .5s ease-in-out;
+ 		-o-transition:all .5s ease-in-out;
+ 	}
+
+ 	.nav a:hover{
+ 		color:#000;
+ 		background: #2fc5ff
+ 	}
+
+ 	.nav li a:first-child{
+ 		font-size: 16px;
+ 		height: 50px;
+ 		line-height: 50px;
+ 		position: relative;
+ 		text-indent: 36px;
+ 	}
+
+ 	.nav .main-menu a:first-child::before{
+background: url(../images/home.png) center no-repeat;
+ 	}
+
+ 		.nav .settings a:first-child::before{
+background: url(../images/settings.png) center no-repeat;
+ 	}
+
+ 		.nav .link a:first-child::before{
+background: url(../images/link.png) center no-repeat;
+ 	}
+
+ 		.nav .search a:first-child::before{
+background: url(../images/search.png) center no-repeat;
+ 	}
+
+ 	.nav li a:first-child::before{
+ 		content:'';
+ 		position: absolute;
+ 		display: block;
+ 		width: 32px;
+ 		height: 32px;
+ 		top:9px;
+ 		left:9px;
+ 	}
+
+ /*==============Gradient===================*/
+
+ .container_linear{
+ 	width: 500px;
+ 	height: 500px;
+ 	float: left;
+ 	margin:40px;
+ 	background:#999;
+ 	border-radius: 5px;
+ 	box-shadow: 0 8px 15px rgba(0,0,0, .6);
+ 	background: -moz-linear-gradient(to right,#333 40%,#bbb 70%, #ddd 90%)
+ }
+
+ .container_radial{
+ 	width: 400px;
+ 	height: 300px;
+ 	float: left;
+ 	margin:40px;
+ 	background:#999;
+ 	border-radius: 5px;
+ 	box-shadow: 0 8px 15px rgba(0,0,0, .6);
+ 	overflow: hidden;
+ 	cursor:pointer;
+ 	position: relative;
+ }
+
+ .container_radial::after{
+ 	content:'';
+ 	width: 400px;
+ 	height: 300px;
+ 	display: block;
+ 	position: absolute;
+ 	top:0;
+ 	left:0;
+ 	background: -moz-radial-gradient(transparent,#555);
+ 	transition:opacity .5s ease-in-out;
+ }
+
+ .container_radial:hover::after{
+ 	opacity: 0;
+ }
+
+  /*==============Transform===================*/
+.clearfix{
+	clear:both;
+}
+  .contain_transform{
+  	height: 150px;
+  	width: 250px;
+  	margin: 80px;
+  	line-height: 150px;
+		background: rgba(0,0,0,.8);
+		text-align: center;
+		font-size: 18px;
+		color:#fff;
+		border:3px solid #fff;
+		border-radius:8px;
+
+
+		transform:translate(30px, 40px) rotate(30deg) scale(0.5) skewX(30deg);
+		-moz-transform:translate(30px,40px) rotate(30deg) scale(0.5) skewX(30deg);
+		-webkit-transform:translate(30px,40px) rotate(30deg) scale(0.5) skewX(30deg);
+		-o-transform:translate(30px, 40px) rotate(30deg) scale(0.5) skewX(30deg);
+		transform-origin:top left;
+  }
+
+.for_perspective{
+	-moz-perspective:500px;
+	width: 200px;
+	height: 200px;
+}
+
+  .contain_transform2{
+  	height: 150px;
+  	width: 250px;
+  	margin: 200px;
+  	line-height: 150px;
+		background: rgba(0,0,0,.8);
+		text-align: center;
+		font-size: 18px;
+		color:#fff;
+		border:3px solid #fff;
+		border-radius:8px;
+
+
+		transform:rotateY(30deg);
+  }
+#wrapper{
+margin: 80px;
+-moz-perspective:500px;
+}
+#cube{
+	position: relative;
+	width: 300px;
+	height: 300px;
+	  -moz-transform-origin: 50% 50% -150px;
+  -moz-transform-style: preserve-3d;
+}
+  #side,.side1{
+  	 width: 300px;
+  height: 300px;
+  background: rgba(0,0,0,.3);
+  background: -moz-radial-gradient(rgba(0,0,0,.1),rgba(0,0,0,.5));
+  position: absolute;
+  border: 10px solid #fff;
+  border-radius: 10px;
+  font-size: 5em;
+  color: #fff;
+  line-height: 300px;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.4);
+  box-shadow: 0 0 6px rgba(0,0,0,.5);
+  -moz-transform-origin: 50% 50% -150px;
+  }
+
+  .side2 {
+  -moz-transform: rotateY(90deg);
+}
+
+.side3 {
+  -moz-transform: rotateY(-90deg);
+}
+.side4 {
+  -moz-transform: rotateX(90deg);
+}
+.side5 {
+  -moz-transform: rotateX(-90deg);
+}
+.side6 {
+  -moz-transform: rotateY(180deg);
+}
+
+ /*==============animation===================*/
+
+.square{
+	width: 40px;
+	height: 40px;
+	margin: 40px;
+	box-shadow: 0 0 8px rgba(0,0,0, .5);
+	border-radius: 3px;
+	background: #333;
+	animation-name:spin;/*Имя анимации*/
+	animation-duration:2s;/*Длительность одного цикла анимации*/
+	animation-timing-function:linear;/*Устанавливает, согласно какой функции времени должна происходить анимация каждого цикла между ключевыми кадрами*/
+	animation-iteration-count:infinite;/*Количество циклов анимации infinite - бесконечно*/
+}
+.square:hover{
+	animation-play-state:paused;
+}
+ @-moz-keyframes spin{
+ 	0%{
+transform:rotate(0deg);
+ 	}
+
+ 	100%{
+transform:rotate(360deg);
+ 	}
+ }
+
+ .cont{
+ 	width: 200px;
+ 	height: 20px;
+ 	border:3px solid #fff;
+ 	border-radius: 7px;
+ 	background: #ddd000;
+ 	overflow: hidden;
+ 	margin: 40px;
+ 	box-shadow: 0 3px 4px (0,0,0,.3);
+ }
+
+.bar{
+ 	height: 20px;
+ 	width: 400px;
+ 	background: #ddd000;
+ 	background: #999;
+ 	animation:slide 5s linear infinite;
+ }
+
+  @-moz-keyframes slide{
+ 	0%{
+margin-left:0;
+ 	}
+
+ 	100%{
+margin-left:100%;
+ 	}
+ }
+
+ img {
+  float: right;
+  margin: 20px;
+}
+p{
+	clear:right;
+}

@@ -1,0 +1,44 @@
+.card-container{
+	-webkit-perspective:700;
+	perspective:700;
+}
+
+.card{
+	color:#fff;
+	text-align: center;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 25px;
+	line-height: 200px;
+	font-family: arial,sans-serif;
+	margin: 100px auto;
+	width: 200px;
+	height: 200px;
+	position: relative;
+	transition:all .6s ease;
+	-webkit-transform-style:preserve-3d;
+	transform-style:preserve-3d;
+}
+.card:hover{
+	-webkit-transform:rotateY(180deg);
+	transform:rotateY(180deg);
+}
+
+.front, .back{
+	background: #5677fc;
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	top: 0;
+	left: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+p{
+	margin: 0;
+}
+
+.back{
+	-webkit-transform:rotateY(180deg);
+	        transform:rotateY(180deg);
+}

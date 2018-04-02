@@ -1,0 +1,19 @@
+.block{
+	width: 100px;
+	height: 100px;
+	background: red;
+}
+
+.fl-block{
+	float:left;
+}
+
+.fr-block{
+	float:right;
+}
+
+.clear:after{
+	content: "";
+	clear:both;
+	display: block;
+}
